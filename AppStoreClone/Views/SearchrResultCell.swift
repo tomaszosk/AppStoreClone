@@ -9,7 +9,7 @@ import UIKit
 
 class SearchrResultCell: UICollectionViewCell {
     
-    let imageView: UIImageView = {
+    let appIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .red
         imageView.widthAnchor.constraint(equalToConstant: 64).isActive = true
@@ -43,12 +43,14 @@ class SearchrResultCell: UICollectionViewCell {
         button.titleLabel?.font = .boldSystemFont(ofSize: 14)
         button.backgroundColor = UIColor(white: 0.95, alpha: 1)
         button.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        button.layer.cornerRadius = 15
+        button.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        button.layer.cornerRadius = 16
         return button
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .yellow
         
         let labelsStackView = UIStackView(arrangedSubviews: [
             nameLabel, categoryLabel, ratingsLabel
@@ -56,23 +58,16 @@ class SearchrResultCell: UICollectionViewCell {
         labelsStackView.axis = .vertical
         
         let stackView = UIStackView(arrangedSubviews: [
-            imageView, labelsStackView, getButton
+            appIconImageView, labelsStackView, getButton
         ])
         stackView.spacing = 12
         stackView.alignment = .center
         
         addSubview(stackView)
         
-        let padding: CGFloat = 20
+        let padding: CGFloat = 16
         
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: self.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: padding),
-            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -padding)
-        ])
+        stackView.fillSuperview(padding: .init(top: padding, left: padding, bottom: padding, right: padding))
     }
     
     required init?(coder: NSCoder) {
