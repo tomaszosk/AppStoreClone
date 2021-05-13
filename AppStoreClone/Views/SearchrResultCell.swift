@@ -48,26 +48,49 @@ class SearchrResultCell: UICollectionViewCell {
         return button
     }()
     
+    lazy var ScreenshotLeftImageView = self.createScreenshotImageView()
+    lazy var ScreenshotMiddleImageView = self.createScreenshotImageView()
+    lazy var ScreenshotRightImageView = self.createScreenshotImageView()
+    
+    func createScreenshotImageView() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .blue
+        return imageView
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .yellow
+        
+        let padding: CGFloat = 16
         
         let labelsStackView = UIStackView(arrangedSubviews: [
             nameLabel, categoryLabel, ratingsLabel
         ])
         labelsStackView.axis = .vertical
         
-        let stackView = UIStackView(arrangedSubviews: [
+        let infoTopStackView = UIStackView(arrangedSubviews: [
             appIconImageView, labelsStackView, getButton
         ])
-        stackView.spacing = 12
-        stackView.alignment = .center
+        infoTopStackView.spacing = 12
+        infoTopStackView.alignment = .center
         
-        addSubview(stackView)
+        let screenshotsStackView = UIStackView(arrangedSubviews: [
+            ScreenshotLeftImageView, ScreenshotMiddleImageView, ScreenshotRightImageView
+        ])
+        screenshotsStackView.spacing = 12
+        screenshotsStackView.distribution = .fillEqually
         
-        let padding: CGFloat = 16
+        let overallStackView = UIStackView(arrangedSubviews: [
+            infoTopStackView, screenshotsStackView
+        ])
+        overallStackView.axis = .vertical
+        overallStackView.spacing = padding
         
-        stackView.fillSuperview(padding: .init(top: padding, left: padding, bottom: padding, right: padding))
+        addSubview(overallStackView)
+        
+        
+        
+        overallStackView.fillSuperview(padding: .init(top: padding, left: padding, bottom: padding, right: padding))
     }
     
     required init?(coder: NSCoder) {
