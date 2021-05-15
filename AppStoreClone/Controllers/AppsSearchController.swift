@@ -16,7 +16,7 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
         
         collectionView.backgroundColor = .systemBackground
         
-        collectionView.register(SearchrResultCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
 
     }
     

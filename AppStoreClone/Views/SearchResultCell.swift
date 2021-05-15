@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchrResultCell: UICollectionViewCell {
+class SearchResultCell: UICollectionViewCell {
     
     let appIconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -63,13 +63,11 @@ class SearchrResultCell: UICollectionViewCell {
         
         let padding: CGFloat = 16
         
-        let labelsStackView = UIStackView(arrangedSubviews: [
-            nameLabel, categoryLabel, ratingsLabel
-        ])
-        labelsStackView.axis = .vertical
-        
         let infoTopStackView = UIStackView(arrangedSubviews: [
-            appIconImageView, labelsStackView, getButton
+            appIconImageView,
+            VerticalStackView(arrangedSubviews: [
+                nameLabel, categoryLabel, ratingsLabel]),
+            getButton
         ])
         infoTopStackView.spacing = 12
         infoTopStackView.alignment = .center
@@ -80,15 +78,11 @@ class SearchrResultCell: UICollectionViewCell {
         screenshotsStackView.spacing = 12
         screenshotsStackView.distribution = .fillEqually
         
-        let overallStackView = UIStackView(arrangedSubviews: [
+        let overallStackView = VerticalStackView(arrangedSubviews: [
             infoTopStackView, screenshotsStackView
-        ])
-        overallStackView.axis = .vertical
-        overallStackView.spacing = padding
+        ], spacing: padding)
         
         addSubview(overallStackView)
-        
-        
         
         overallStackView.fillSuperview(padding: .init(top: padding, left: padding, bottom: padding, right: padding))
     }
