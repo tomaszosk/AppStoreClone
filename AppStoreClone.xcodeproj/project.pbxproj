@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		722395CF264857D400F6D57E /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722395CE264857D400F6D57E /* AppsSearchController.swift */; };
 		723A31F72652EA7700609694 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A31F62652EA7700609694 /* SearchResult.swift */; };
-		723A31FB2652EB8A00609694 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A31FA2652EB8A00609694 /* File.swift */; };
+		723A31FB2652EB8A00609694 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A31FA2652EB8A00609694 /* Result.swift */; };
 		723FE6B32650684200FABA35 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723FE6B22650684200FABA35 /* VerticalStackView.swift */; };
 		72658BD4264AFC97003B7341 /* UIVIew+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72658BD3264AFC97003B7341 /* UIVIew+Layout.swift */; };
+		7291AF73265581E600E883DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AF72265581E600E883DD /* NetworkManager.swift */; };
 		729B2EA12649AC2B003AD615 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B2EA02649AC2B003AD615 /* SearchResultCell.swift */; };
 		72B33B6D2643281700E09C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B33B6C2643281700E09C9A /* AppDelegate.swift */; };
 		72B33B6F2643281700E09C9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B33B6E2643281700E09C9A /* SceneDelegate.swift */; };
@@ -25,9 +26,10 @@
 /* Begin PBXFileReference section */
 		722395CE264857D400F6D57E /* AppsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
 		723A31F62652EA7700609694 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		723A31FA2652EB8A00609694 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		723A31FA2652EB8A00609694 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		723FE6B22650684200FABA35 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		72658BD3264AFC97003B7341 /* UIVIew+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Layout.swift"; sourceTree = "<group>"; };
+		7291AF72265581E600E883DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		729B2EA02649AC2B003AD615 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		72B33B692643281700E09C9A /* AppStoreClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B33B6C2643281700E09C9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				723A31F62652EA7700609694 /* SearchResult.swift */,
-				723A31FA2652EB8A00609694 /* File.swift */,
+				723A31FA2652EB8A00609694 /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -76,6 +78,14 @@
 				723FE6B22650684200FABA35 /* VerticalStackView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7291AF71265581D500E883DD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7291AF72265581E600E883DD /* NetworkManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		729B2E9F2649AC07003AD615 /* Views */ = {
@@ -105,6 +115,7 @@
 		72B33B6B2643281700E09C9A /* AppStoreClone */ = {
 			isa = PBXGroup;
 			children = (
+				7291AF71265581D500E883DD /* Service */,
 				723A31F52652EA6500609694 /* Model */,
 				72658BD2264AFBB7003B7341 /* Helpers */,
 				729B2E9F2649AC07003AD615 /* Views */,
@@ -195,9 +206,10 @@
 				72B33B712643281700E09C9A /* ViewController.swift in Sources */,
 				722395CF264857D400F6D57E /* AppsSearchController.swift in Sources */,
 				72B33B6D2643281700E09C9A /* AppDelegate.swift in Sources */,
-				723A31FB2652EB8A00609694 /* File.swift in Sources */,
+				723A31FB2652EB8A00609694 /* Result.swift in Sources */,
 				72B33B6F2643281700E09C9A /* SceneDelegate.swift in Sources */,
 				723FE6B32650684200FABA35 /* VerticalStackView.swift in Sources */,
+				7291AF73265581E600E883DD /* NetworkManager.swift in Sources */,
 				729B2EA12649AC2B003AD615 /* SearchResultCell.swift in Sources */,
 				72658BD4264AFC97003B7341 /* UIVIew+Layout.swift in Sources */,
 			);
