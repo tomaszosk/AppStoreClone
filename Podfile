@@ -6,5 +6,6 @@ target 'AppStoreClone' do
   use_frameworks!
 
   # Pods for AppStoreClone
+  pod 'SDWebImage'
 
 end
