@@ -50,12 +50,7 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
         
         let appResult = appResults[indexPath.item]
-        cell.nameLabel.text = appResult.trackName
-        cell.categoryLabel.text = appResult.primaryGenreName
-        cell.ratingsLabel.text = "Rating: \(appResult.averageUserRating ?? 0)"
-        
-//        cell.appIconImageView
-//        cell.ScreenshotLeftImageView
+        cell.appResult = appResult
         
         return cell
     }
