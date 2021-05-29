@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,8 @@
 		72B33B742643281700E09C9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B33B722643281700E09C9A /* Main.storyboard */; };
 		72B33B792643281700E09C9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B33B772643281700E09C9A /* LaunchScreen.storyboard */; };
 		72B33B822643400600E09C9A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B33B812643400600E09C9A /* BaseTabBarController.swift */; };
-		72D7FBAE26470D5900539A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D7FBAD26470D5900539A6E /* Assets.xcassets */; };
+		72FA25842662EB1E001FA892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72FA25832662EB1E001FA892 /* Assets.xcassets */; };
+		72FA25892662EB75001FA892 /* AccentColor.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 72FA25882662EB75001FA892 /* AccentColor.colorset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,8 @@
 		72B33B782643281700E09C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72B33B7A2643281700E09C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B33B812643400600E09C9A /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		72D7FBAD26470D5900539A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		72FA25832662EB1E001FA892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/AppStoreJSONApis/AppStoreJSONApis/Assets.xcassets; sourceTree = "<group>"; };
+		72FA25882662EB75001FA892 /* AccentColor.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AccentColor.colorset; path = "../../../GitHub Followers/GitHub Followers/Support/Assets.xcassets/AccentColor.colorset"; sourceTree = "<group>"; };
 		8230BDBFAB1159B4897B5656 /* Pods-AppStoreClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreClone.release.xcconfig"; path = "Target Support Files/Pods-AppStoreClone/Pods-AppStoreClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,10 +134,19 @@
 				72B33B702643281700E09C9A /* ViewController.swift */,
 				72B33B722643281700E09C9A /* Main.storyboard */,
 				72B33B772643281700E09C9A /* LaunchScreen.storyboard */,
-				72D7FBAD26470D5900539A6E /* Assets.xcassets */,
+				72FA25872662EB68001FA892 /* Support */,
+				72FA25832662EB1E001FA892 /* Assets.xcassets */,
 				72B33B7A2643281700E09C9A /* Info.plist */,
 			);
 			path = AppStoreClone;
+			sourceTree = "<group>";
+		};
+		72FA25872662EB68001FA892 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				72FA25882662EB75001FA892 /* AccentColor.colorset */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		92695156C79ECC2D8816A852 /* Frameworks */ = {
@@ -152,7 +163,6 @@
 				27FFD540925A95EC12DE996C /* Pods-AppStoreClone.debug.xcconfig */,
 				8230BDBFAB1159B4897B5656 /* Pods-AppStoreClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -216,7 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B33B792643281700E09C9A /* LaunchScreen.storyboard in Resources */,
-				72D7FBAE26470D5900539A6E /* Assets.xcassets in Resources */,
+				72FA25842662EB1E001FA892 /* Assets.xcassets in Resources */,
+				72FA25892662EB75001FA892 /* AccentColor.colorset in Resources */,
 				72B33B742643281700E09C9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
