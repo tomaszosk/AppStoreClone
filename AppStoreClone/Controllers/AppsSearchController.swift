@@ -10,6 +10,8 @@ import UIKit
 class AppsSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     fileprivate let cellId = "cellId"
+    
+    fileprivate let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +19,15 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
         collectionView.backgroundColor = .systemBackground
         
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
+        
+        setupSearchBar()
 
         fetchiTunesApps()
+    }
+    
+    fileprivate func setupSearchBar() {
+        navigationItem.searchController = self.searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     fileprivate var appResults = [Result]()
